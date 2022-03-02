@@ -531,13 +531,14 @@ void AP_MotorsMatrix::add_motor(int8_t motor_num, float angle_degrees, float yaw
 }
 
 // add_motor using position and prop direction. Roll and Pitch factors can differ (for asymmetrical frames)
-void AP_MotorsMatrix::add_motor(int8_t motor_num, float roll_factor_in_degrees, float pitch_factor_in_degrees, float yaw_factor, uint8_t testing_order)
+void AP_MotorsMatrix::add_motor(int8_t motor_num, float roll_factor_in_degrees, float pitch_factor_in_degrees, float yaw_factor,float throttle_factor, uint8_t testing_order)
 {
     add_motor_raw(
         motor_num,
         cosf(radians(roll_factor_in_degrees + 90)),
         cosf(radians(pitch_factor_in_degrees)),
         yaw_factor,
+        throttle_factor
         testing_order);
 }
 
@@ -580,6 +581,14 @@ void AP_MotorsMatrix::setup_motors(motor_frame_class frame_class, motor_frame_ty
     bool success = true;
 
     switch (frame_class) {
+    case MOTOR_FRAME_PENTA:{
+    add_motor(AP_MOTORS_MOT_1,72,-1,0.90450844f,1)
+    add_motor(AP_MOTORS_MOT_2,144,1,1.25000007f,2)
+    add_motor(AP_MOTORS_MOT_3,0,-1,0.90450844f,3)
+    add_motor(AP_MOTORS_MOT_4,-144,-1,0.69098298f,4)
+    add_motor(AP_MOTORS_MOT_5,-72,1,1.25000007f,5)
+    }
+    
 #if AP_MOTORS_FRAME_QUAD_ENABLED
         case MOTOR_FRAME_QUAD:
             _frame_class_string = "QUAD";
