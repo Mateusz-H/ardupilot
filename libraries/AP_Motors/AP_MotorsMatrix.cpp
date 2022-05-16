@@ -591,6 +591,15 @@ void AP_MotorsMatrix::setup_motors(motor_frame_class frame_class, motor_frame_ty
     break;
     }
     
+/* 
+     add_motor(int8_t motor_num, float roll_factor_in_degrees, float pitch_factor_in_degrees, float yaw_factor, uint8_t testing_order);
+ */
+    
+/*                         add_motor(AP_MOTORS_MOT_1, 60, 60, 0, 1);
+                        add_motor(AP_MOTORS_MOT_2, 0, -160, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 3);
+                        add_motor(AP_MOTORS_MOT_3, -60, -60, 0, 4);
+                        add_motor(AP_MOTORS_MOT_4, 0, 160, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 2); */
+    
 #if AP_MOTORS_FRAME_QUAD_ENABLED
         case MOTOR_FRAME_QUAD:
             _frame_class_string = "QUAD";

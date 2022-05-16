@@ -278,11 +278,11 @@ static Motor firefly_motors[] =
 };
 
 static Motor penta_motors[]={
-    Motor(AP_MOTORS_MOT_1,72,-1,0.90450844f,1),
-    Motor(AP_MOTORS_MOT_2,144,1,1.25000007f,2),
-    Motor(AP_MOTORS_MOT_3,0,-1,0.90450844f,3),
-    Motor(AP_MOTORS_MOT_4,-144,-1,0.69098298f,4),
-    Motor(AP_MOTORS_MOT_5,-72,1,1.25000007f,5)
+    Motor(AP_MOTORS_MOT_1,72,-1,1),
+    Motor(AP_MOTORS_MOT_2,144,1,2),
+    Motor(AP_MOTORS_MOT_3,0,-1,3),
+    Motor(AP_MOTORS_MOT_4,-144,-1,4),
+    Motor(AP_MOTORS_MOT_5,-72,1,5)
 };
 /*
   table of supported frame types. String order is important for
