@@ -128,6 +128,7 @@ class ManifestGenerator():
         frame_to_mavlink_dict = {
             "quad": "QUADROTOR",
             "hexa": "HEXAROTOR",
+            "penta": "PENTACOPTER",
             "y6": "ARDUPILOT_Y6",
             "tri": "TRICOPTER",
             "octa": "OCTOROTOR",

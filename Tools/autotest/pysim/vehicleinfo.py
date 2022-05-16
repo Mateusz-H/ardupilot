@@ -11,6 +11,10 @@ class VehicleInfo(object):
         "default_frame": "quad",
         "frames": {
             # COPTER
+            "penta": {
+                "waf_target": "bin/arducopter",
+                "default_params_filename": "default_params/copter.parm",
+            },
             "+": {
                 "waf_target": "bin/arducopter",
                 "default_params_filename": "default_params/copter.parm",

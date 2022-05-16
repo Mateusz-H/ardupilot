@@ -471,6 +471,7 @@ class DataflashLog(object):
             "OCTA": 8,
             "OCTA_QUAD": 8,
             "DECA": 10,
+            "PENTA":5,
 #            "HELI": 1,
 #            "HELI_DUAL": 2,
             "TRI": 3,

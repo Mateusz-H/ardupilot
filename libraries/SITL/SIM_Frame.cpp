@@ -277,6 +277,13 @@ static Motor firefly_motors[] =
     Motor(AP_MOTORS_MOT_6, -60, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  6, -1, 0, 0, 6, 0, -90)
 };
 
+static Motor penta_motors[]={
+    Motor(AP_MOTORS_MOT_1,72,-1,0.90450844f,1),
+    Motor(AP_MOTORS_MOT_2,144,1,1.25000007f,2),
+    Motor(AP_MOTORS_MOT_3,0,-1,0.90450844f,3),
+    Motor(AP_MOTORS_MOT_4,-144,-1,0.69098298f,4),
+    Motor(AP_MOTORS_MOT_5,-72,1,1.25000007f,5)
+};
 /*
   table of supported frame types. String order is important for
   partial name matching
@@ -309,6 +316,7 @@ static Frame supported_frames[] =
     Frame("tilttri",   3, tilttri_motors),
     Frame("y6",        6, y6_motors),
     Frame("firefly",   6, firefly_motors)
+    Frame("penta",   5, penta_motors)
 };
 
 // get air density in kg/m^3
